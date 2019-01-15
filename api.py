@@ -8,7 +8,7 @@ app = Flask(__name__)
 api = Api(app)
 
 app.config ['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ec2-34-238-249-178.compute-1.amazonaws.com:5432/helloworld'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://54.91.135.139:5432/helloworld'
 db = SQLAlchemy(app)
 
 
