@@ -1,6 +1,6 @@
 from flask import Flask
-from flask_restful import Api, Resource, reqparse, request
-from datetime import datetime, date 
+from flask_restful import Api, Resource, reqparse
+from datetime import datetime, date
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -8,7 +8,7 @@ app = Flask(__name__)
 api = Api(app)
 
 app.config ['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://18.206.218.40:5432/helloworld'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ec2-34-238-249-178.compute-1.amazonaws.com:5432/helloworld'
 db = SQLAlchemy(app)
 
 
@@ -25,13 +25,13 @@ class Database(db.Model):
 class User(Resource):
 
     def put(self, name):
-        
+
         parser = reqparse.RequestParser()
         parser.add_argument("dateofBirth")
         args = parser.parse_args()
-        
+
         user = db.session.query(Database).filter(Database.username == name).first()
-        
+
         if user is None:
             user = Database(name, args["dateofBirth"])
             db.session.add(user)
@@ -40,37 +40,33 @@ class User(Resource):
 
         db.session.commit()
 
-        return '',204 
+        return '',204
 
 
     def get(self, name):
 
         user = db.session.query(Database).filter(Database.username == name).first()
-        
+
         birth = datetime.strptime(user.dateofBirth, "%Y-%m-%d").date()
 
-        today = date.today() 
+        today = date.today()
 
         nextbirthday = date(today.year,birth.month,birth.day)
 
         result = (nextbirthday - today).days
-        
+
         if (result < 0):
             nextbirthday = date(today.year+1,birth.month,birth.day)
             result = (nextbirthday - today).days
 
         if (result > 0):
-            return {"message": "Hello "+user.username+"! Your birthday is in "+str(result)+" days"} 
+            return {"message": "Hello "+user.username+"! Your birthday is in "+str(result)+" days"}
 
         elif (result == 0):
             return {"message": "Hello "+user.username+"! Happy Birtday!"}
 
- 
-if __name__ == "__main__":       
+
+if __name__ == "__main__":
     db.create_all()
     api.add_resource(User, "/hello/<string:name>")
-    app.run()
-
-
-
-
+    app.run(host='0.0.0.0')
