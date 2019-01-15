@@ -9,7 +9,6 @@ EC2 setting up,
 #!/bin/bash 
 sudo yum update -y
 sudo yum install python-pip git -y
-pip install --user virtualenv
 
 - skip to Configure Security Group > Type: All traffic
 - Review and Launch > Launch
