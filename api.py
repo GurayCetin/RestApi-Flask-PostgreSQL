@@ -65,13 +65,11 @@ class User(Resource):
         elif (result == 0):
             return {"message": "Hello "+user.username+"! Happy Birtday!"}
 
-        
-            
-db.create_all()
-
-api.add_resource(User, "/hello/<string:name>")
-
-app.run(debug=True)
+ 
+if __name__ == "__main__":       
+    db.create_all()
+    api.add_resource(User, "/hello/<string:name>")
+    app.run()
 
 
 
