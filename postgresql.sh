@@ -6,9 +6,9 @@ echo "*****************************************"
 #
 sudo amazon-linux-extras install postgresql10=latest -y
 #
-sudo yum -y install postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
+sudo yum install postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs -y
 #
-sudo postgresql-setup initdb
+sudo postgresql-setup --initdb --unit postgresql
 #
 echo "*****************************************"
 echo "postgresql.conf update"
