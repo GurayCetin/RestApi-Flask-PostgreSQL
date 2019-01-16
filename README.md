@@ -16,7 +16,7 @@ sudo /usr/bin/easy_install virtualenv
 - Create a new key pair > name = ec2 (will be downloaded your local) >Launch instances
 
 ssh to EC2 instance (MobaXterm),
-- Basic SSH Settings | Remote host = 34.238.249.178 (public ip of ec2 instance) > Specify username = ec2-user > port:22
+- Basic SSH Settings | Remote host = 3.88.91.236 (public ip of ec2 instance) > Specify username = ec2-user > port:22
 - Advanced SSH settings | Use private key > select ec2.pem > OK
 
 After login,
@@ -45,4 +45,8 @@ virtual environment,
 to run api,
 - $(venv) pyhton api.py
 
+in browser, 
+3.88.91.236:5000 
+
+and with postman queries can be checked.
 
