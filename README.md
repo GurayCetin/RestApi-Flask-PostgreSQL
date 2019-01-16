@@ -29,8 +29,8 @@ Install postgresql,
 - $ sudo service postgresql initdb 
 - $ sudo service postgresql start
 - $ sudo -u postgres psql 
-\ CREATE DATABASE helloworld;
-\q
+- \ CREATE DATABASE helloworld;
+- \q
 - $ sudo -u postgres createuser ec2-user
 - $ sudo cp -r -v postgresql.conf /var/lib/pgsql/data/postgresql.conf
 - $ sudo service postgresql restart
