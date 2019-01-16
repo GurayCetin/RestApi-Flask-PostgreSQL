@@ -50,3 +50,7 @@ in browser,
 
 and with postman queries can be checked.
 
+PUT 3.88.91.236:5000/hello/John {"dateofBirth":"2000-01-21"}
+
+GET 3.88.91.236:5000/hello/John 
+{"message": "Hello John! Your birtday is in 5 days"}
