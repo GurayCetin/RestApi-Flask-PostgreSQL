@@ -1,5 +1,5 @@
 # RestApi-Flask-PostgreSQL
-A RestApi using Flask and PostgreSQL in AWS EC2 instance
+A RestApi shows left days to birthday using Flask and PostgreSQL in AWS EC2 instance
 
 EC2 setting up,
 - Services > Compute > EC2 > Launch intance
