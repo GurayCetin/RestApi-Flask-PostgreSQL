@@ -20,7 +20,7 @@ ssh to EC2 instance (MobaXterm),
 - Advanced SSH settings | Use private key > select ec2.pem > OK
 
 After login,
--$ git clone https://github.com/GurayCetin/RestApi-Flask-PostgreSQL
+- $ git clone https://github.com/GurayCetin/RestApi-Flask-PostgreSQL
 -$ cd RestApi-Flask-PostgreSQL
 
 Install postgresql,
