@@ -4,7 +4,7 @@ A RestApi shows left days to birthday using Flask and PostgreSQL in AWS EC2 inst
 Prerequisites;
 <br>Python 2.7.14 -> default in instance
 <br>Flask 1.0.2 -> requirements.txt
-<br>PostreSQL 10.4 -> downloaded from command line
+<br>PostreSQL 10.4 -> to be downloaded from command line
 
 EC2 setting up,
 - Services > Compute > EC2 > Launch intance
