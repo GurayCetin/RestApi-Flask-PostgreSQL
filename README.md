@@ -1,15 +1,17 @@
 # RestApi-Flask-PostgreSQL
 A RestApi shows left days to birthday using Flask and PostgreSQL in AWS EC2 instance
 
+Python 2.7.14 is main prerequisite as default in instance and other requirements in specified in requirements.txt file. 
+
 EC2 setting up,
 - Services > Compute > EC2 > Launch intance
 - Amazon Linux 2 AMI > t2.micro > Next: Configure instance 
 - Advanced details | as text 
 
-#!/bin/bash 
-sudo yum update -y
-sudo yum install python-pip git -y
-sudo /usr/bin/easy_install virtualenv
+<br>#!/bin/bash 
+<br>sudo yum update -y
+<br>sudo yum install python-pip git -y
+<br>sudo /usr/bin/easy_install virtualenv
 
 - skip to Configure Security Group > Type: All traffic
 - Review and Launch > Launch
