@@ -10,12 +10,10 @@ EC2 setting up,
 - Services > Compute > EC2 > Launch intance
 - Amazon Linux 2 AMI > t2.micro > Next: Configure instance 
 - Advanced details | as text 
-
 <br>#!/bin/bash 
 <br>sudo yum update -y
 <br>sudo yum install python-pip git -y
 <br>sudo /usr/bin/easy_install virtualenv
-
 - skip to Configure Security Group > Type: All traffic
 - Review and Launch > Launch
 - Create a new key pair > name = ec2 (will be downloaded your local) >Launch instances
